@@ -44,8 +44,10 @@
 			{{if not .IsHome}}
 				{{if eq $.style "card"}}
 <div class="children card-container">
-	<!-- Check for image... -->
-<img class="children card-image" src="/images/uploads/Icon_Placeholder.jpg"></img>
+{{ $imgLink := .Params.logo | default false }}
+{{if $imgLink}}
+<img class="children card-image" src={{$imgLink}}></img>
+{{end}}
 <h2 class="children card-title">
 	<a href="{{.URL}}" >{{ .Title }}</a>
 </h2>
