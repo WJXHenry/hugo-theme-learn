@@ -624,8 +624,8 @@ section.attachments.grey .attachments-files {
 }
 .children-card {
     display: grid;
-    grid-gap: 25px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     margin-top: 50px;
 }
 .card-container {
