@@ -46,11 +46,11 @@
 <div class="children card-container">
 {{ $imgLink := .Params.logo | default false }}
 {{if $imgLink}}
-<img class="children card-image" src={{$imgLink}}></img>
+<img src={{$imgLink}}></img>
 {{end}}
-<h2 class="children card-title">
+<h3>
 	<a href="{{.URL}}" >{{ .Title }}</a>
-</h2>
+</h3>
 				{{else if hasPrefix $.style "h"}}
 					{{$num := sub ( int (trim $.style "h") ) 1 }}
 					{{$numn := add $num $.count }}

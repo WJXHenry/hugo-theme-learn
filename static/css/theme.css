@@ -636,16 +636,18 @@ section.attachments.grey .attachments-files {
     transition: 0.3s;
     border-radius: 25px;
     padding: 25px;
-    overflow: auto;
 }
 .card-container:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-.card-title {
+.card-container a, h3 {
     text-align: center;
-    padding: 15px;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
-.card-image {
+.card-container img {
     width: 75%;
     height: auto;
 }
