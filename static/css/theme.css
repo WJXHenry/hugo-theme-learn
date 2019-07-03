@@ -622,7 +622,31 @@ section.attachments.grey .attachments-files {
     margin-bottom: 0px;
     margin-top: 5px;
 }
-
+.children-card {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 50px;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 25px;
+    padding: 25px;
+}
+.card-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-title {
+    text-align: center;
+    padding-bottom: 15px;
+}
+.card-image {
+    width: 75%;
+    height: auto;
+}
 code, kbd, pre, samp {
     font-family: "Consolas", menlo, monospace;
     font-size: 92%;

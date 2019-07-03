@@ -42,11 +42,17 @@
 		{{ if and .Params.hidden (not $.showhidden) }}
 		{{else}}
 			{{if not .IsHome}}
-				{{if hasPrefix $.style "h"}}
+				{{if eq $.style "card"}}
+<div class="children card-container">
+	<!-- Check for image... -->
+<img class="children card-image" src="/images/uploads/Icon_Placeholder.jpg"></img>
+<h2 class="children card-title">
+	<a href="{{.URL}}" >{{ .Title }}</a>
+</h2>
+				{{else if hasPrefix $.style "h"}}
 					{{$num := sub ( int (trim $.style "h") ) 1 }}
 					{{$numn := add $num $.count }}
 
-<p>Hi</p>
 {{(printf "<h%d>" $numn)|safeHTML}}
 <a href="{{.URL}}" >{{ .Title }}</a>
 {{(printf "</h%d>" $numn)|safeHTML}}
@@ -63,6 +69,9 @@
 					{{else}}
 <p>{{.Summary}}</p>
 					{{end}}
+				{{end}}
+				{{if eq $.style "card"}}
+</div>
 				{{end}}
 			{{end}}
 			{{ if lt $.count $.depth}}
