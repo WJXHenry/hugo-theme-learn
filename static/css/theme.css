@@ -628,7 +628,7 @@ section.attachments.grey .attachments-files {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     margin-top: 50px;
 }
-.card-container {
+.children-card-container {
     display: flex;
     flex-direction: column;
     background: #fafafa;
@@ -637,17 +637,17 @@ section.attachments.grey .attachments-files {
     border-radius: 25px;
     padding: 25px;
 }
-.card-container:hover {
+.children-card-container:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-.card-container a, h3 {
+.children-card-container a, h3 {
     text-align: center;
     padding: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
 }
-.card-container img {
+.children-card-container img {
     width: 75%;
     height: auto;
 }

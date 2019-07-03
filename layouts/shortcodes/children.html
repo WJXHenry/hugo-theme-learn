@@ -5,7 +5,11 @@
 {{ $withDescription :=  .Get "description" | default false }}
 {{ $sortTerm :=  .Get "sort" | default "Weight" }}
 
+	{{if eq $style "card"}}
+<div class="children children-{{$style}}">
+	{{else}}
 <ul class="children children-{{$style}}">
+	{{end}}
 	{{ .Scratch.Set "pages" .Page.Pages }}
 
 	{{if .Page.IsHome}}
@@ -33,7 +37,11 @@
 	{{else}}
 		{{template "childs" dict "menu" $pages "style" $style "showhidden" $showhidden "count" 1 "depth" $depth "pages" .Site.Pages "description" $withDescription "sortTerm" $sortTerm}}
 	{{end}}
+	{{if eq $style "card"}}
+</div>
+	{{else}}
 </ul>
+	{{end}}
 
 {{.Inner|safeHTML}}
 
@@ -43,7 +51,7 @@
 		{{else}}
 			{{if not .IsHome}}
 				{{if eq $.style "card"}}
-<div class="children card-container">
+<div class="children children-card-container">
 {{ $imgLink := .Params.logo | default false }}
 {{if $imgLink}}
 <img src={{$imgLink}}></img>
