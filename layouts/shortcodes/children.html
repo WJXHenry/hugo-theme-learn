@@ -46,6 +46,7 @@
 					{{$num := sub ( int (trim $.style "h") ) 1 }}
 					{{$numn := add $num $.count }}
 
+<p>Hi</p>
 {{(printf "<h%d>" $numn)|safeHTML}}
 <a href="{{.URL}}" >{{ .Title }}</a>
 {{(printf "</h%d>" $numn)|safeHTML}}
