@@ -625,7 +625,7 @@ section.attachments.grey .attachments-files {
 .children-card {
     display: grid;
     grid-gap: 50px;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-top: 50px;
 }
 .children-card-container {
@@ -636,6 +636,7 @@ section.attachments.grey .attachments-files {
     transition: 0.3s;
     border-radius: 25px;
     padding: 25px;
+    justify-content: space-evenly;
 }
 .children-card-container:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
